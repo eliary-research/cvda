@@ -1,0 +1,24 @@
+# Data License — CC-BY-4.0
+
+The data files in this repository (paper figures, aggregate cross-vendor agreement metrics, anonymized session-level statistics) are licensed under the Creative Commons Attribution 4.0 International License (CC-BY-4.0).
+
+You are free to:
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material for any purpose, including commercially
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+## Required attribution
+
+```
+Kim, Chanmin (2026). "Cross-Vendor Disagreement Atlas (CVDA): A 40-Session Production Field Study of Multi-LLM Personality Inference." Eliary Inc. https://github.com/Eliary-Inc/cvda
+```
+
+## Privacy & exclusions
+
+- **No raw user-generated text** is released. Only aggregate cross-vendor agreement metrics, type-code distributions, archetype-space sizes, and `score_ait` distribution.
+- **No personally identifying information** is released.
+- Code is licensed separately under MIT (see `LICENSE`).
