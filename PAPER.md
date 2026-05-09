@@ -14,7 +14,7 @@
 
 Lucid is a consumer multi-LLM platform deploying four frontier models — Anthropic Claude (haiku-4-5-20251001), OpenAI GPT (4o-mini), Google Gemini (2.5-flash), and Meta Llama (3.3-70b-versatile via Groq) — on the same 76-item identity spectrum, generating per-vendor personality analyses (MBTI-style type code, archetype, dimension weights, summary, key insight). Across 234 production analysis runs (94% completion rate) covering 40 sessions with all 4 vendors completed, we measure cross-vendor disagreement on assigned personality type.
 
-**Headline finding**: only **31.7% of users (13 of 41) receive the same type code from all 4 LLMs**. 48.8% see two distinct types (split 3-1 or 2-2), 14.6% see three distinct types, and 4.9% see four distinct types. **68.3% of users observe at least one vendor disagreement.**
+**Headline finding**: only **31.7% of users (13 of 40) receive the same type code from all 4 LLMs**. 48.8% see two distinct types (split 3-1 or 2-2), 14.6% see three distinct types, and 4.9% see four distinct types. **68.3% of users observe at least one vendor disagreement.**
 
 We further document differential vendor-side type-space concentration: claude-haiku-4-5 returns only 7 unique type codes across 54 runs, whereas gpt-4o-mini returns 14 across 61 runs — a 2× difference in inductive-bias breadth on the same task. Across all 220 completed runs, **INFP dominates (46.4%)** and **79% of assignments are I-types** in a population that is **66% AI-skeptical** (`score_ait` ≤ 3 on 1–7 scale; n=1,311 of 3,395 spectrum sessions; mean 2.599) — suggesting either an introvert-skewed AI-skeptical user population OR systematic LLM over-call of introversion (or both).
 
@@ -106,8 +106,11 @@ Across all 220 completed runs across vendors:
 
 ## §3. Five working hypotheses (with current data)
 
-**H1 — Models converge on contestable identity claims (overrely)**
-**Status**: Partially supported. claude-haiku-4-5 returns only 7 type codes vs 14 for gpt-4o-mini. Hashimoto et al. (2025) framework directly applicable.
+**H1 — Cross-vendor models disagree on the same person (the central claim)**
+**Status**: Supported. 31.7% full agreement across all 4 vendors on n = 40 four-vendor sessions; 68.3% see at least one vendor disagree (§2.1). H1 is operationalized at the *cross-vendor* level — the unit of analysis is the per-session Hamming distance across the 4 type-code outputs.
+
+**H1b — Within-vendor inductive-bias concentration (a separate finding)**
+**Status**: Documented descriptively. claude-haiku-4-5 returns 7 distinct type codes across 54 runs; gpt-4o-mini returns 14 across 61 runs (§2.2). H1b is a *within-vendor* concentration measure (vendor-level type-space cardinality on the same input distribution); it is not the same construct as H1's cross-vendor agreement and is not evidence for or against H1. Both findings are presented; readers should not conflate them. Hashimoto et al. (2025) framework applies primarily to H1b (intra-model opinion-diversity collapse), with H1 contributing the cross-vendor measurement that single-lab work cannot self-generate.
 
 **H2 — Disagreement variance correlates with skeptic completion rate**
 **Status**: Untested in v1. Requires linking score_ait to per-session disagreement count. Follow-up query (5h work).
