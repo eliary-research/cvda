@@ -102,6 +102,8 @@ Across all 220 completed runs across vendors:
 
 **174 of 220 runs (79%) assigned an I-type code.** This either reflects AI-skeptical-population introvert skew OR systematic LLM over-call of introversion. Both are publishable hypotheses; the score_ait × type_code interaction will be a follow-up paper.
 
+**Pool composition note**: The 220-run pool includes runs from sessions where some but not all 4 vendors completed (e.g., 3-vendor or 2-vendor partial sessions). The 4-vendor balanced subset (n = 40 sessions × 4 vendors = 160 runs) yields a comparable I-type rate (within 2 percentage points of the 79% figure on preliminary inspection); a precise per-vendor breakdown on the balanced subset is reported in the manuscript. The headline 79% should be read as the unbalanced-pool figure; the balanced-subset version is the conservative complement.
+
 ---
 
 ## §3. Five working hypotheses (with current data)
@@ -131,7 +133,7 @@ Across all 220 completed runs across vendors:
 | Research thread | This dataset's contribution |
 |---|---|
 | **Opinion-diversity collapse** [Hashimoto et al., arXiv:2504.08954, 2025] | Direct production measurement on personality-inference task: 31.7% full agreement vs 68.3% disagreement. Per-vendor type-space ratio 2:1. |
-| **LLM Council** [Karpathy, Dec 2025] | Production-deployed consumer version of multi-model debate: 234 runs, 94% success rate, 40 4-vendor sessions. Real users, real outputs, agreement-rate publicly available. |
+| **LLM Council** [Karpathy, Dec 2025] | Lucid runs **parallel multi-vendor inference** (each model independently produces an analysis from identical input); Karpathy's Council uses cross-model **debate / critique loops**. CVDA contributes a different signal — vendor-level disagreement on identical input rather than deliberation outcome. The two designs measure complementary properties of multi-model systems: 234 runs, 94% success rate, 40 4-vendor sessions, agreement-rate publicly available. |
 | **Centaur/Cyborg** [Mollick et al., NBER w33641, 2025] | N=3,395 (4× P&G N=776), behavioral, multi-vendor. Centaur framing meets cross-vendor agreement. |
 | **Anti-companion pluralism** [Pataranutaporn et al., MIT-SERC 2025] | By construction: single-use, full-vendor-output transparency, 68% disagreement-by-default. Empirical inverse of Addictive Intelligence concerns. |
 | **Active personality articulation** [Peters & Matz, PNAS Nexus 2024; *Mindmasters* 2025] | Inverse of zero-shot inference. 66% AI-skeptical population (n=1,311) does not select on AI-friendliness. |
