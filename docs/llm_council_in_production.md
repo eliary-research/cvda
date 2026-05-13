@@ -16,7 +16,7 @@ We've been running the consumer-deployed version of that idea for 18 days. Here 
 
 ## The setup
 
-[Lucid](https://lucid.currot.com) is a consumer self-discovery product. The user takes a 76-question identity spectrum (Big-Five-adjacent, MBTI-style, plus 4 embedded AI-attitude items). Their answers are sent — in parallel — to four frontier models:
+[Lucid](https://lucid.currot.com) is a consumer self-discovery product. The user takes a 74-question identity spectrum (Big-Five-adjacent, MBTI-style, plus 4 embedded AI-attitude items). Their answers are sent — in parallel — to four frontier models:
 
 | Lens | Provider | Model |
 |---|---|---|
@@ -67,7 +67,7 @@ GPT-4o-mini deploys twice the type-space concentration of Claude-haiku-4-5 on id
 
 ## And the population is the resistant segment
 
-We measure users' baseline AI attitude with 4 embedded items inside the 76-question spectrum. The composite (`score_ait`, 1–7 Likert) lands at **mean 2.599 (SD 1.241)** for the 1,311 analyzed sessions — left-skewed, AI-skeptical. **66% of users (`score_ait` ≤ 3)** are skeptical; only 4.7% are positive (≥ 5).
+We measure users' baseline AI attitude with 4 embedded items inside the 74-question spectrum. The composite (`score_ait`, 1–7 Likert) lands at **mean 2.599 (SD 1.241)** for the 1,311 analyzed sessions — left-skewed, AI-skeptical. **66% of users (`score_ait` ≤ 3)** are skeptical; only 4.7% are positive (≥ 5).
 
 Spectrum-first onboarding does not select on AI-friendliness. Lucid reaches the resistant segment, not the AI-easy one. And the resistant segment is exactly the population that matters most for any thesis about AI adoption — the converted-easy users were already going to convert.
 

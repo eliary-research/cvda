@@ -35,7 +35,7 @@ Lucid runs **4 frontier LLMs (Claude, GPT, Gemini, Llama) on the same identity q
 
 ## Methodology
 
-Per session, the 76-question identity spectrum is sent (in parallel) to 4 LLMs:
+Per session, the 74-question identity spectrum is sent (in parallel) to 4 LLMs:
 
 | Lens | Provider | Model |
 |---|---|---|
