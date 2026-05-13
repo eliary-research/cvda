@@ -18,7 +18,7 @@ Lucid is a consumer multi-LLM platform deploying four frontier models — Anthro
 
 We further document differential vendor-side type-space concentration: claude-haiku-4-5 returns only 7 unique type codes across 54 runs, whereas gpt-4o-mini returns 14 across 61 runs — a 2× difference in inductive-bias breadth on the same task. Across all 220 completed runs, **INFP dominates (46.4%)** and **79% of assignments are I-types** in a population that is **66% AI-skeptical** (`score_ait` ≤ 3 on 1–7 scale; n=1,311 of 3,395 spectrum sessions; mean 2.599) — suggesting either an introvert-skewed AI-skeptical user population OR systematic LLM over-call of introversion (or both).
 
-The dataset operationalizes opinion-diversity collapse [Hashimoto et al., arXiv:2504.08954, 2025], multi-LLM Council orchestration [Karpathy, Dec 2025], anti-companion pluralism [Pataranutaporn et al., MIT-SERC 2025], centaur/cyborg field experiments at consumer scale [Mollick et al., NBER w33641, 2025], and active-articulation personality measurement [Peters & Matz, PNAS Nexus 2024]. Anonymized session-level data + replication code at GitHub `Eliary-Inc/cvda`.
+The dataset operationalizes opinion-diversity collapse [Hashimoto et al., arXiv:2504.08954, 2025], multi-LLM Council orchestration [Karpathy, Dec 2025], anti-companion pluralism [Pataranutaporn et al., MIT-SERC 2025], centaur/cyborg field experiments at consumer scale [Mollick et al., NBER w33641, 2025], and active-articulation personality measurement [Peters & Matz, PNAS Nexus 2024]. Anonymized session-level data + replication code at GitHub `eliary-research/cvda`.
 
 ---
 
