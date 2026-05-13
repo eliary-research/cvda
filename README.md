@@ -71,4 +71,4 @@ Methodology builds on Prof. Jong Hee Park's MCMCpack (SNU PSIR; 907 citations on
 
 ## Contact
 
-Chanmin Kim — `developer@eliary.com` — [Lucid](https://lucid.currot.com) | [Currot](https://currot.com)
+Chan Min Park — `developer@eliary.com` — [Lucid](https://lucid.currot.com) | [Currot](https://currot.com)

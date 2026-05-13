@@ -3,7 +3,7 @@
 
 **Status**: In-progress note v1 — preliminary findings, manuscript in preparation
 **Document date**: 2026-05-04 KST
-**Authors**: Chanmin Kim (Eliary Inc., Lucid+Currot)
+**Authors**: Chan Min Park (Eliary Inc., Lucid+Currot)
 **Target venue**: arXiv stat.AP / cs.CL primary, cs.HC cross-list
 **Target full submission**: July 2026
 **Data**: Production from `prism.spectrum_analysis_runs`, deployed April 18, 2026; queries snapshot 2026-05-04 KST late morning.

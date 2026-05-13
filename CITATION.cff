@@ -9,8 +9,8 @@ abstract: >-
   (N=3,395 sessions, 1,311 analyzed) is 66% AI-skeptical (score_ait ≤ 3
   on 1-7, mean 2.599).
 authors:
-  - family-names: Kim
-    given-names: Chanmin
+  - family-names: Park
+    given-names: Chan Min
     affiliation: "Eliary Inc."
     email: developer@eliary.com
 date-released: 2026-05-04
