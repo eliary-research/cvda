@@ -147,7 +147,7 @@ Across all 220 completed runs across vendors:
 
 ## §5. Data + code release
 
-**Repository**: https://github.com/Eliary-Inc/cvda *(public, see also Zenodo DOI on first push)*
+**Repository**: https://github.com/eliary-research/cvda *(public, see also Zenodo DOI on first push)*
 **Dataset**: anonymized session-level cross-vendor agreement metrics (41 sessions × 4 vendors); aggregate type-code distribution; per-vendor diversity measures. **No raw analysis text released — privacy preserving.**
 **Replication code**: Python 3.11 (pandas, scipy, matplotlib) + Spanner SQL queries.
 **License**: CC-BY-4.0 for data, MIT for code.
