@@ -1,5 +1,5 @@
 # Cross-Vendor Disagreement Atlas (CVDA)
-## A 40-Session Production Field Study of Multi-LLM Personality Inference
+## A 41-Session Production Field Study of Multi-LLM Personality Inference
 
 **Status**: In-progress note v1 — preliminary findings, manuscript in preparation
 **Document date**: 2026-05-04 KST
@@ -12,9 +12,9 @@
 
 ## Abstract (240 words)
 
-Lucid is a consumer multi-LLM platform deploying four frontier models — Anthropic Claude (haiku-4-5-20251001), OpenAI GPT (4o-mini), Google Gemini (2.5-flash), and Meta Llama (3.3-70b-versatile via Groq) — on the same 74-item identity spectrum, generating per-vendor personality analyses (MBTI-style type code, archetype, dimension weights, summary, key insight). Across 234 production analysis runs (94% completion rate) covering 40 sessions with all 4 vendors completed, we measure cross-vendor disagreement on assigned personality type.
+Lucid is a consumer multi-LLM platform deploying four frontier models — Anthropic Claude (haiku-4-5-20251001), OpenAI GPT (4o-mini), Google Gemini (2.5-flash), and Meta Llama (3.3-70b-versatile via Groq) — on the same 74-item identity spectrum, generating per-vendor personality analyses (MBTI-style type code, archetype, dimension weights, summary, key insight). Across 234 production analysis runs (94% completion rate) covering 41 sessions with all 4 vendors completed, we measure cross-vendor disagreement on assigned personality type.
 
-**Measurement target**: not type-prediction accuracy (no ground truth exists for personality assignment) but cross-vendor disagreement on identical input — the same 74-item answer set routed to four models in parallel. **Headline finding**: only **31.7% of users (13 of 40) receive the same type code from all 4 LLMs**. 48.8% see two distinct types (split 3-1 or 2-2), 14.6% see three distinct types, and 4.9% see four distinct types. **68.3% of users observe at least one vendor disagreement.**
+**Measurement target**: not type-prediction accuracy (no ground truth exists for personality assignment) but cross-vendor disagreement on identical input — the same 74-item answer set routed to four models in parallel. **Headline finding**: only **31.7% of users (13 of 41) receive the same type code from all 4 LLMs**. 48.8% see two distinct types (split 3-1 or 2-2), 14.6% see three distinct types, and 4.9% see four distinct types. **68.3% of users observe at least one vendor disagreement.**
 
 We further document differential vendor-side type-space concentration: claude-haiku-4-5 returns only 7 unique type codes across 54 runs, whereas gpt-4o-mini returns 14 across 61 runs — a 2× difference in inductive-bias breadth on the same task. Across all 220 completed runs, **INFP dominates (46.4%)** and **79% of assignments are I-types** in a population that is **66% AI-skeptical** (`score_ait` ≤ 3 on 1–7 scale; n=1,311 of 3,395 spectrum sessions; mean 2.599) — suggesting either an introvert-skewed AI-skeptical user population OR systematic LLM over-call of introversion (or both).
 
@@ -43,16 +43,18 @@ Lucid runs a 74-question identity spectrum (Big-Five-adjacent + 16-type-style + 
 |---|---|
 | Total spectrum sessions (Apr 18 – May 4) | **3,395** |
 | Sessions with `score_ait` (analyzed) | 1,311 (38.6%) |
-| Sessions with full 4-vendor analysis | **40** (1.2% of starts; 3.1% of analyzed) |
+| Sessions with full 4-vendor analysis | **41** (1.2% of starts; 3.1% of analyzed) |
 | Phone-verified completers | 59 (1.7% of starts; 4.5% of analyzed) |
 
-The 4-vendor session count (n = 40) reflects beta-window infrastructure constraints rather than a sampling design choice: Lucid's production deployment rate-limited cross-vendor inference during the April 18 – May 4 launch window to avoid LLM-API rate-limit incidents during traffic spikes. Capacity scaling is planned for May 5 onward; we expect N ≥ 200 4-vendor sessions by month-end at the current daily acquisition rate. All n = 40 sessions are reported here as a single dataset; we make no inferential claims that require N beyond this — the headline 31.7% full-agreement figure is a descriptive estimate with Wilson-score 95% CI [18.6%, 48.0%] (binomial, k = 13, n = 40), reported below as such.
+The 4-vendor session count (n = 41) reflects beta-window infrastructure constraints rather than a sampling design choice: Lucid's production deployment rate-limited cross-vendor inference during the April 18 – May 4 launch window to avoid LLM-API rate-limit incidents during traffic spikes. Capacity scaling is planned for May 5 onward; we expect N ≥ 200 4-vendor sessions by month-end at the current daily acquisition rate. All n = 41 sessions are reported here as a single dataset; we make no inferential claims that require N beyond this — the headline 31.7% full-agreement figure is a descriptive estimate with Wilson-score 95% CI [19.6%, 47.0%] (binomial, k = 13, n = 41), reported below as such.
+
+**Data-integrity note (added 2026-05-13)**: The original 5/4 data lock summary table reported `Sessions with all 4 vendors completed | 40`; the detailed distribution table sums to 41 (13 + 20 + 6 + 2), and all reported percentages (31.7%, 48.8%, 14.6%, 4.9%) match the n = 41 denominator. The corrected count of n = 41 is used throughout this revision; the original data_lock_20260504.md retains the n = 40 summary cell with this discrepancy disclosed in a header note. The corrected figure has no material effect on any qualitative claim or on the Wilson CI's substantive coverage (CI [19.6%, 47.0%] at n = 41 vs [20.1%, 48.0%] at n = 40).
 
 `score_ait` distribution: mean 2.599, sd 1.241, left-skewed. **AI-skeptical (≤ 3): 868 of 1,311 = 66.2%**; AI-neutral (3 < x < 5): 29.1%; AI-positive (≥ 5): 4.7%.
 
 ### §1.4 Cross-vendor measurement
 
-For each session in the 40-session subset, we compute:
+For each session in the 41-session subset, we compute:
 - **Distinct-type-code count**: number of unique `type_code` values returned across the 4 vendors (∈ {1, 2, 3, 4})
 - **Per-vendor type-space size**: number of distinct `type_code` values produced by each vendor across all sessions
 - **Per-vendor archetype-space size**: same for `archetype` field
@@ -65,7 +67,7 @@ Future revisions will add semantic-similarity metrics on `summary` and `key_insi
 
 ### §2.1 Cross-vendor type_code agreement (Fig 1)
 
-Among 40 sessions with all 4 vendor analyses completed:
+Among 41 sessions with all 4 vendor analyses completed:
 
 | Distinct types | n | % |
 |---|---|---|
@@ -104,14 +106,14 @@ Across all 220 completed runs across vendors:
 
 **174 of 220 runs (79%) assigned an I-type code.** This either reflects AI-skeptical-population introvert skew OR systematic LLM over-call of introversion. Both are publishable hypotheses; the score_ait × type_code interaction will be a follow-up paper.
 
-**Pool composition note**: The 220-run pool includes runs from sessions where some but not all 4 vendors completed (e.g., 3-vendor or 2-vendor partial sessions). The 4-vendor balanced subset (n = 40 sessions × 4 vendors = 160 runs) yields a comparable I-type rate (within 2 percentage points of the 79% figure on preliminary inspection); a precise per-vendor breakdown on the balanced subset is reported in the manuscript. The headline 79% should be read as the unbalanced-pool figure; the balanced-subset version is the conservative complement.
+**Pool composition note**: The 220-run pool includes runs from sessions where some but not all 4 vendors completed (e.g., 3-vendor or 2-vendor partial sessions). The 4-vendor balanced subset (n = 41 sessions × 4 vendors = 164 runs) yields a comparable I-type rate (within 2 percentage points of the 79% figure on preliminary inspection); a precise per-vendor breakdown on the balanced subset is reported in the manuscript. The headline 79% should be read as the unbalanced-pool figure; the balanced-subset version is the conservative complement.
 
 ---
 
 ## §3. Five working hypotheses (with current data)
 
 **H1 — Cross-vendor models disagree on the same person (the central claim)**
-**Status**: Supported. 31.7% full agreement across all 4 vendors on n = 40 four-vendor sessions; 68.3% see at least one vendor disagree (§2.1). H1 is operationalized at the *cross-vendor* level — the unit of analysis is the per-session Hamming distance across the 4 type-code outputs.
+**Status**: Supported. 31.7% full agreement across all 4 vendors on n = 41 four-vendor sessions; 68.3% see at least one vendor disagree (§2.1). H1 is operationalized at the *cross-vendor* level — the unit of analysis is the per-session Hamming distance across the 4 type-code outputs.
 
 **H1b — Within-vendor inductive-bias concentration (a separate finding)**
 **Status**: Documented descriptively. claude-haiku-4-5 returns 7 distinct type codes across 54 runs; gpt-4o-mini returns 14 across 61 runs (§2.2). H1b is a *within-vendor* concentration measure (vendor-level type-space cardinality on the same input distribution); it is not the same construct as H1's cross-vendor agreement and is not evidence for or against H1. Both findings are presented; readers should not conflate them. Hashimoto et al. (2025) framework applies primarily to H1b (intra-model opinion-diversity collapse), with H1 contributing the cross-vendor measurement that single-lab work cannot self-generate.
@@ -135,7 +137,7 @@ Across all 220 completed runs across vendors:
 | Research thread | This dataset's contribution |
 |---|---|
 | **Opinion-diversity collapse** [Hashimoto et al., arXiv:2504.08954, 2025] | Direct production measurement on personality-inference task: 31.7% full agreement vs 68.3% disagreement. Per-vendor type-space ratio 2:1. |
-| **LLM Council** [Karpathy, Dec 2025] | Lucid runs **parallel multi-vendor inference** (each model independently produces an analysis from identical input); Karpathy's Council uses cross-model **debate / critique loops**. CVDA contributes a different signal — vendor-level disagreement on identical input rather than deliberation outcome. The two designs measure complementary properties of multi-model systems: 234 runs, 94% success rate, 40 4-vendor sessions, agreement-rate publicly available. |
+| **LLM Council** [Karpathy, Dec 2025] | Lucid runs **parallel multi-vendor inference** (each model independently produces an analysis from identical input); Karpathy's Council uses cross-model **debate / critique loops**. CVDA contributes a different signal — vendor-level disagreement on identical input rather than deliberation outcome. The two designs measure complementary properties of multi-model systems: 234 runs, 94% success rate, 41 4-vendor sessions, agreement-rate publicly available. |
 | **Centaur/Cyborg** [Mollick et al., NBER w33641, 2025] | N=3,395 (4× P&G N=776), behavioral, multi-vendor. Centaur framing meets cross-vendor agreement. |
 | **Anti-companion pluralism** [Pataranutaporn et al., MIT-SERC 2025] | By construction: single-use, full-vendor-output transparency, 68% disagreement-by-default. Empirical inverse of Addictive Intelligence concerns. |
 | **Active personality articulation** [Peters & Matz, PNAS Nexus 2024; *Mindmasters* 2025] | Inverse of zero-shot inference. 66% AI-skeptical population (n=1,311) does not select on AI-friendliness. |
@@ -146,7 +148,7 @@ Across all 220 completed runs across vendors:
 ## §5. Data + code release
 
 **Repository**: https://github.com/Eliary-Inc/cvda *(public, see also Zenodo DOI on first push)*
-**Dataset**: anonymized session-level cross-vendor agreement metrics (40 sessions × 4 vendors); aggregate type-code distribution; per-vendor diversity measures. **No raw analysis text released — privacy preserving.**
+**Dataset**: anonymized session-level cross-vendor agreement metrics (41 sessions × 4 vendors); aggregate type-code distribution; per-vendor diversity measures. **No raw analysis text released — privacy preserving.**
 **Replication code**: Python 3.11 (pandas, scipy, matplotlib) + Spanner SQL queries.
 **License**: CC-BY-4.0 for data, MIT for code.
 **Privacy**: All session-level data anonymized at extraction. No PII. No raw user free-text.
@@ -155,7 +157,7 @@ Across all 220 completed runs across vendors:
 
 ## §6. Limitations
 
-1. **N=40** for full 4-vendor coverage is small. Power scales as production data accumulates (estimated +200 sessions over next 4 weeks via creator drop traffic 5/4-5/30).
+1. **N=41** for full 4-vendor coverage is small. Power scales as production data accumulates (estimated +200 sessions over next 4 weeks via creator drop traffic 5/4-5/30).
 2. **Self-selection**: Lucid users opt in to spectrum-first onboarding.
 3. **18-day window**: long-arc opinion stability not measurable.
 4. **Vendor-API drift**: agreement rates depend on model versions (claude-haiku-4-5, gpt-4o-mini, gemini-2.5-flash, llama-3.3-70b). Rerun comparison planned at quarterly cadence.
