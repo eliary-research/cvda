@@ -3,8 +3,8 @@
 ## 2,984 → 3,395 sessions of 4-model debate, and what users do when models disagree
 
 **Date**: 2026-05-04
-**Author**: Chanmin Kim, Eliary Inc.
-**Permalink**: https://github.com/Eliary-Inc/cvda/blob/main/docs/llm_council_in_production.md
+**Author**: Chan Min Park, Eliary Inc.
+**Permalink**: https://github.com/eliary-research/cvda/blob/main/docs/llm_council_in_production.md
 
 ---
 
@@ -100,9 +100,9 @@ The 1-page in-progress paper is at [`PAPER.md`](../PAPER.md). The full preprint 
 
 ## Read more
 
-- Working paper: https://github.com/Eliary-Inc/cvda
+- Working paper: https://github.com/eliary-research/cvda
 - Try Lucid: https://lucid.currot.com
 - Companion paper *The Single-Creator Trap*: https://github.com/Eliary-Inc/single-creator-trap
 - Companion paper *Signal Inflation Hypothesis*: https://github.com/Eliary-Inc/signal-inflation-hypothesis
 
-— Chanmin Kim, Eliary Inc.
+— Chan Min Park, Eliary Inc.
