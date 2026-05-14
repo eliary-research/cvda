@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-title: "Cross-Vendor Disagreement Atlas (CVDA): A 40-Session Production Field Study of Multi-LLM Personality Inference"
+title: "Cross-Vendor Disagreement Atlas (CVDA): A 41-Session Production Field Study of Multi-LLM Personality Inference"
 abstract: >-
   Lucid is a consumer multi-LLM platform deploying four frontier models
   (Claude haiku-4-5, GPT-4o-mini, Gemini 2.5-flash, Llama 3.3-70b) on the
-  same 74-item identity spectrum. Across 40 sessions with all 4 vendors
+  same 74-item identity spectrum. Across 41 sessions with all 4 vendors
   completed, only 31.7% of users receive the same MBTI-style type code
   from all 4 LLMs; 68.3% see at least one vendor disagreement. Population
   (N=3,395 sessions, 1,311 analyzed) is 66% AI-skeptical (score_ait ≤ 3

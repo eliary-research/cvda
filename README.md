@@ -6,7 +6,7 @@
 
 ## TL;DR
 
-Lucid runs **4 frontier LLMs (Claude, GPT, Gemini, Llama) on the same identity questionnaire**, generating per-vendor personality analyses (MBTI-style type code, archetype, dimension weights) per user. **40 sessions** have all 4 vendor analyses completed.
+Lucid runs **4 frontier LLMs (Claude, GPT, Gemini, Llama) on the same identity questionnaire**, generating per-vendor personality analyses (MBTI-style type code, archetype, dimension weights) per user. **41 sessions** have all 4 vendor analyses completed.
 
 **Headline finding** — only **31.7% of users (13/41) get the same type code from all 4 LLMs**. **68.3% see at least one vendor disagreement.** 19.5% see 3 distinct types. 4.9% have all 4 LLMs disagree.
 
@@ -56,12 +56,12 @@ Each generates a structured JSON output (`type_code`, `archetype`, `summary`, `k
 See [CITATION.cff](./CITATION.cff). BibTeX:
 
 ```bibtex
-@misc{kim2026cvda,
-  author       = {Kim, Chanmin},
-  title        = {Cross-Vendor Disagreement Atlas (CVDA): A 40-Session Production Field Study of Multi-LLM Personality Inference},
+@misc{park2026cvda,
+  author       = {Park, Chan Min},
+  title        = {Cross-Vendor Disagreement Atlas (CVDA): A 41-Session Production Field Study of Multi-LLM Personality Inference},
   year         = {2026},
   publisher    = {Eliary Inc.},
-  url          = {https://github.com/Eliary-Inc/cvda}
+  url          = {https://github.com/eliary-research/cvda}
 }
 ```
 
